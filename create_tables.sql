@@ -1,6 +1,6 @@
 CREATE TABLE physical_attributes (
   age numeric PRIMARY KEY,
-  heigh numeric,
+  height numeric,
   weight numeric
 );
 
@@ -21,15 +21,16 @@ CREATE TABLE player (
 );
 
 CREATE TABLE player_stats (
+  player_id varchar(50) REFERENCES player,
   avg numeric PRIMARY KEY,
   H numeric,
   HR numeric,
   RBI numeric,
   K numeric,
   BB numeric,
-  1B numeric,
-  2B numeric,
-  3B numeric
+  one_B numeric,
+  two_B numeric,
+  three_B numeric
 );
 
 CREATE TABLE team (
