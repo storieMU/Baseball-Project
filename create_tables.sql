@@ -32,13 +32,15 @@ CREATE TABLE player_stats (
   two_B numeric,
   three_B numeric
 );
-
+/*this table should be complete and ready to go*/
 CREATE TABLE team (
   team_id numeric NOT NULL,
   name varchar(50) NOT NULL,
   city varchar(50),
+  state varchar,
   league varchar(50),
   division varchar(50),
+  joined numeric,
   PRIMARY KEY (team_id,name)
 );
 
