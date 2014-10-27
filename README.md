@@ -3,4 +3,6 @@
 </p>
 ================
 
-CS3380 Group 3 Baseball Project 
+<p align="center">
+	CS3380 Group 3 Baseball Project 
+</p>
