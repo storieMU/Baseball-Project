@@ -1,4 +1,4 @@
-<p align="center>
+<p align="center">
 	<img src="http://i.imgur.com/c1kTRkg.png" alt="Project Banner"/>
 </p>
 ================
