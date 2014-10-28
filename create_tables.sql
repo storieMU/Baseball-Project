@@ -1,3 +1,7 @@
+CREATE SCHEME baseball;
+
+SET search_path = baseball;
+
 CREATE TABLE physical_attributes (
   age numeric PRIMARY KEY,
   height numeric,
