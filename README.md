@@ -10,3 +10,6 @@
 	CS3380 Group 3 Baseball Project 
 </p>
 
+<p>
+	Project focusing on the aggregation of MLB team and player stats, as well as simulation of games and calculation of 		Sabermetrics.
+</p>
