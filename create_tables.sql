@@ -2,50 +2,26 @@ CREATE SCHEME baseball;
 
 SET search_path = baseball;
 
-CREATE TABLE physical_attributes (
-  age numeric PRIMARY KEY,
-  height numeric,
-  weight numeric
+/*finished*/
+CREATE TABLE team (
+  teamId varchar NOT NULL,
+  name varchar(50) NOT NULL,
+  city varchar(50),
+  state varchar(10),
+  league varchar(50),
+  division varchar(50),
+  stadium varchar(50),
+  joined numeric,
+  PRIMARY KEY (teamId,name)
 );
 
+/*Create table batting, Create table pitching*/
+
 CREATE TABLE roster (
-  player varchar(50) PRIMARY KEY,
+  playerId varchar(50) PRIMARY KEY REFERENCES player,
   active varchar,
   inactive varchar,
   dl varchar
-);
-
-CREATE TABLE player (
-  player_id varchar(50) NOT NULL,
-  fname varchar(30) NOT NULL,
-  lname varchar(30) NOT NULL,
-  d_o_b date,
-  position varchar,
-  PRIMARY KEY(player_id,fname,lname)
-);
-
-CREATE TABLE player_stats (
-  player_id varchar(50) REFERENCES player,
-  avg numeric PRIMARY KEY,
-  H numeric,
-  HR numeric,
-  RBI numeric,
-  K numeric,
-  BB numeric,
-  one_B numeric,
-  two_B numeric,
-  three_B numeric
-);
-/*this table should be complete and ready to go*/
-CREATE TABLE team (
-  team_id numeric NOT NULL,
-  name varchar(50) NOT NULL,
-  city varchar(50),
-  state varchar,
-  league varchar(50),
-  division varchar(50),
-  joined numeric,
-  PRIMARY KEY (team_id,name)
 );
 
 CREATE TABLE team_stats (
@@ -60,9 +36,13 @@ CREATE TABLE team_stats (
 );
 
 CREATE TABLE ballpark (
-  stadium_id numeric,
-  name varchar(50),
-  location varchar(50),
+  stadium_id varchar(10),
+  seating numeric,
+  name varchar(100),
+  city varchar(25),
+  state varchar(25),
+  surface varchar(20),
+  opened numeric,
   PRIMARY KEY (stadium_id, name)
 );
   
