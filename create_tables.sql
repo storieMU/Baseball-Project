@@ -24,6 +24,35 @@ CREATE TABLE roster (
   dl varchar
 );
 
+CREATE TABLE batter (
+num_position integer NOT NULL,
+position varchar(5),
+playerId varchar(50) NOT NULL PRIMARY KEY,
+age integer,
+g numeric,
+pa numeric,
+ab numeric,
+r numeric,
+h numeric,
+double integer,
+triple integer,
+hr integer,
+rbi numeric,
+sb numeric,
+cs numeric,
+bb numeric,
+so numeric,
+ba numeric,
+obp numeric,
+tb numeric,
+gdp numeric,
+hbp numeric,
+sh numeric,
+sf numeric,
+ibb numeric,
+teamId varchar(3) REFERENCES team
+);
+
 CREATE TABLE team_stats (
   wins numeric,
   losses numeric,
