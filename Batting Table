@@ -1,6 +1,3 @@
-DROP SCHEMA IF EXISTS baseball CASCADE;
-CREATE SCHEMA baseball;
-SET SEARCH_PATH to baseball;
 
 CREATE TABLE batter (
 num_position integer NOT NULL,
